@@ -1,0 +1,39 @@
+.footer{
+    color : $grey-younger_closa;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    @include breakpoint (desktop){
+        flex-direction: row;
+    }
+    &__wrapper{
+        @include breakpoint (desktop){
+            display: flex;
+            flex-direction: row;
+            flex-grow: 1
+        }
+    }
+    p{
+        font-family: "Inter-Regular";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+    }
+    &__item{
+       @include breakpoint (desktop){
+           flex-grow: 1;
+       }
+       &:nth-child(4), &:nth-child(3){
+           display: flex;
+           margin: 1em 0;
+           img{
+               width: 24px;
+               margin-right: 4px;
+           }
+           p{
+               margin: 0;
+           }
+       }
+    }
+}

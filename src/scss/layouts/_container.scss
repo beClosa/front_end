@@ -1,0 +1,6 @@
+.container{
+    padding: $padding_container-mobile;
+    @include breakpoint (desktop){
+        padding: $padding_container-desktop;
+    }
+}
