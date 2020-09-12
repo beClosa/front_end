@@ -37,7 +37,7 @@
                 &:nth-child(1){
                     flex-basis: 75%;
                     @include breakpoint(desktop){
-                        flex-basis: 70%;
+                        flex-basis: 50%;
                         align-self: center;
                     }
                 }
@@ -54,6 +54,9 @@
                 line-height: 22px;
                 text-align: center;  
                 position: relative;
+                &:hover{
+                    text-decoration: underline;
+                }
             }
         }
     }

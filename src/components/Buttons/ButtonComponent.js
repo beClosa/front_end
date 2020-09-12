@@ -6,6 +6,9 @@ const ButtonComponent = props => {
                 {
                     props.text
                 }
+                {
+                    props.children
+                }
             </button>
             <p className="button__description">
                 {props.description}

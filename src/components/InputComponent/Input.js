@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const InputDefault = styled.input`
-    padding : 24px;
-    border: 2px solid #FFFFFF;
+    padding : 21px 20px;
+    border: 1px solid #FFFFFF;
     font-family: "Inter-Bold";
     font-style: normal;
     font-weight: 600;
