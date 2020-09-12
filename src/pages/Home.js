@@ -18,8 +18,8 @@ const Home = () => {
     const cards = [
         {
             id : uuidv4,
-            heading : "Focus session",
-            description : "Schedule your 1 on 1 focus session every day, and get things done together."
+            heading : "Habit-forming",
+            description : "Do what matters most to you every day, and do it together with our members."
         },
         {
             id : uuidv4,
@@ -29,12 +29,12 @@ const Home = () => {
         {
             id : uuidv4,
             heading : "1 on 1 Talk",
-            description : "Network with new individuals from diverse background, and unlock new opportunities."
+            description : "Meet new individuals from diverse background, and unlock new opportunities."
         },
         {
             id : uuidv4, 
             heading : "Share Experience",
-            description : "Book Club, New insight and perspective from our community made for you."
+            description : "New insight and perspective every day from our community activities shared to you."
         }
     ];
     function changeRef(event){
@@ -92,7 +92,16 @@ const Home = () => {
                                 />, "every day"]}
                             />
                             <div className="section__one-button">
-                                <Button text="Join the waitlist       →"/>
+                                <Button>
+                                    <div className="section__one-button-flex">
+                                        <div className="section__one-button-text">
+                                            Join the waitlist
+                                        </div>
+                                        <div className="section__one-button-arrow">
+                                            →
+                                        </div>
+                                    </div>
+                                </Button>
                             </div>
                             </div>
                             <img src={Arrow} alt="White arrow bottom" className="arrow_white animated infinite fadeInDown slower"/>
@@ -100,7 +109,7 @@ const Home = () => {
                     </ScrollAnimation>
                 </SectionComponent>
                 <SectionComponent className="section__seven">
-                    <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOutUp" scrollableParentSelector='.home'>
+                    <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOutUp">
                             <Container>
                                 <div className="section__seven-wrapper">
                                     <Description description={["We are a community of ", <br/>, <TypingEffect
@@ -128,7 +137,7 @@ const Home = () => {
                     </ScrollAnimation>
                 </SectionComponent>
                 <SectionComponent className="section__two">
-                    <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOutUp" scrollableParentSelector='.home'>
+                    <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOutUp">
                             <Container>
                                 <div className="section__two-wrapper">
                                     <Description description={["We ❤ ", <br/>, <TypingEffect
@@ -158,7 +167,7 @@ const Home = () => {
                     </ScrollAnimation>
                 </SectionComponent>
                 <SectionComponent className="section__eight">
-                    <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOutUp" scrollableParentSelector='.home'>
+                    <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOutUp">
                             <Container>
                                   <div className="section__eight-wrapper">
                                         <Description description={"Chance to meet your future"}/>
@@ -168,7 +177,7 @@ const Home = () => {
                     </ScrollAnimation>
                 </SectionComponent>
                 <SectionComponent className="section__three heading">
-                        <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOutUp" scrollableParentSelector='.home'>
+                        <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOutUp">
                             <Container>
                                 <div className="section__three-wrapper">
                                     <div className="section__three-item">
@@ -193,13 +202,12 @@ const Home = () => {
                         </ScrollAnimation>
                 </SectionComponent>
                 <SectionComponent className="section__four heading">
-                        <ScrollAnimation  animateIn="fadeInUp" animateOut="fadeOutUp" scrollableParentSelector='.home'>
+                        <ScrollAnimation  animateIn="fadeInUp" animateOut="fadeOutUp">
                         <Container>
                             <Description
                         description={
                         [
-                            "Not having an accountable partner to help a person accomplish their goals is one reason of ",
-                            <strong> 92% of people did not accomplish their New Year's resolution.</strong>
+                            "Not having an accountable partner to help a person accomplish their goals is one reason of 92% of people did not accomplish their New Year's resolution.",
                         ]
                     }/>
                     <Description description="According to a University of Scranton study by Dan Diamond in Forbes and an article by Dale Tyson"/>
@@ -207,7 +215,7 @@ const Home = () => {
                         </ScrollAnimation>
                 </SectionComponent>
                 <SectionComponent className="section__six heading">
-                        <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOutUp" scrollableParentSelector='.home'>
+                        <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOutUp">
                         <Container>
                            <div className="section__four-wrapper">
                             <div className="section__four-item-description">
@@ -236,7 +244,7 @@ const Home = () => {
                         </ScrollAnimation>
                 </SectionComponent>
                 <SectionComponent className="section__five heading">
-                    <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOutUp" scrollableParentSelector='.home'>
+                    <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOutUp">
                     <Container>
                            <div className="section__five-wrapper">
                            <Description
@@ -271,12 +279,12 @@ const Home = () => {
                     </ScrollAnimation>
                 </SectionComponent>
                 <SectionComponent className="section__seven heading">
-                    <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOutUp" scrollableParentSelector='.home'>
+                    <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOutUp">
                         <Container>
                            <div className="section__seven-wrapper">
                                 <Card
                                         heading="We still early. Join us. Do what matters."
-                                        description="Request Early Access"
+                                        description="Join the waitlist"
                                     />
                            </div>
                         </Container>

@@ -7,12 +7,12 @@ const Footer = () => {
             <div className="footer__wrapper">
                 <div className="footer__item">
                     <p className="footer__item-community">
-                        Community Item
+                        Community Policy
                     </p>
                 </div>
                 <div className="footer__item">
                     <p  className="footer__item-referal">
-                        Refferal
+                        Referral
                     </p>
                 </div>
                 <div className="footer__item">
