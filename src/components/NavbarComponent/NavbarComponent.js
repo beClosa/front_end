@@ -6,7 +6,6 @@ import WhiteLine from "../../images/icons/white-line.svg";
 import Arrow from "../../images/icons/arrow.svg";
 const NavbarCompponent = () => {
     const [navlists, setNavLists] = useState(false);
-
     return (
        <React.Fragment>
            <nav className="navbar">
@@ -17,17 +16,18 @@ const NavbarCompponent = () => {
                    <img src={WhiteLine} alt="burger one" />
                    <img src={WhiteLine} alt="burger-two"/>
                </div>
+                <HamburgerLists classValue="isDesktop"/>
            </nav>
-           {
-               navlists === true ?  <NavbarLists/> : false
-           }
+            {
+                navlists === true ?  <HamburgerLists classValue="isMobile"/> : false
+            }
        </React.Fragment>
     )
 }
 
-const NavbarLists = () => {
+const HamburgerLists = ({classValue}) => {
      return (
-         <ul className="navbar__lists">
+         <ul className={`navbar__lists ${classValue}`}>
              <li className="navbar__lists-item">
                  <button>About</button>
              </li>
@@ -35,12 +35,12 @@ const NavbarLists = () => {
                  <button>Referral</button>
              </li>
              <li className="navbar__lists-item">
-                 <button>Early Members</button>
+                 <button>Referral</button>
              </li>
              <li className="navbar__lists-item">
                  <button>
                      <img className="navbar__white-arrow" src={Arrow} alt="closa__arrow-scrolldown"/>
-                     Early Members
+                     Join the waitlist
                  </button>
              </li>
          </ul>

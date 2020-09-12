@@ -20,6 +20,7 @@ const InputDefault = styled.input`
         color: #888888;        
     }
 `
+
 const Input = props => {
     return (
          <InputDefault

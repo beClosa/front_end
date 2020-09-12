@@ -92,7 +92,7 @@ const Home = () => {
                                 />, "every day"]}
                             />
                             <div className="section__one-button">
-                                <Button text="Request early access"/>
+                                <Button text="Join the waitlist       →"/>
                             </div>
                             </div>
                             <img src={Arrow} alt="White arrow bottom" className="arrow_white animated infinite fadeInDown slower"/>
