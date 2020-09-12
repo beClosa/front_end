@@ -1,0 +1,23 @@
+@import "../utils/variables";
+.button{
+    border-radius: $radius_smaller;
+    &__primary{
+        padding : 20px 28px;
+        border : none;
+        background : #ffffff;
+        font-family : "Inter-Regular";
+        font-size : 14px;
+        &:hover{
+            background : #0A0A0C;
+            color : #ffffff;
+            border : solid #ffffff 2px;
+        }
+    }
+    &__description{
+        width: 169px !important;
+        line-height: 15px !important;
+        letter-spacing: 0 !important;
+        text-transform: lowercase !important;
+        font-size : 12px !important;
+    }
+}   

@@ -1,0 +1,10 @@
+section{
+  position: relative;
+  min-height: 640px;
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+  position: relative;
+  @include breakpoint (desktop){
+    min-height: 100vh;
+  }
+}

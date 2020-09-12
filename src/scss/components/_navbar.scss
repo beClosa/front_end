@@ -1,0 +1,132 @@
+/* utils */
+@import
+'../utils/variables',
+'../utils/mixins';
+
+
+/* Base */
+@import
+'../base/fonts';
+
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 28px 36px 28px 28px;
+    @include breakpoint (desktop){
+        padding: 38px 128px 32px 128px;
+    }
+    &__hamburger{
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        img{
+            &:nth-child(1){
+                transform: translateY(-5px);
+            }
+            &:nth-child(2){
+                transform: translateY(5px);
+            }
+        }
+        @include breakpoint (desktop){
+            display: none;
+        }
+    }
+
+    &__images{
+        @include breakpoint (desktop){
+            align-self: center;
+            flex-basis: 50%;
+        }
+    }
+
+    &__lists{
+        @include breakpoint(desktop){
+            display: flex;
+            list-style: none;
+            padding-inline-start: 0;
+            flex-basis: 50%;
+            justify-content: space-between;
+        }
+        @include breakpoint (mobile){
+            margin: 0;
+            padding: 0px 15px;
+            list-style-type: none;
+            position: fixed;
+            right: 0px;
+            width: 100%;
+            z-index: 2;
+        }
+        &-item{
+           @include breakpoint (mobile){
+                text-align: right;
+           }    
+            button{
+                @include breakpoint (desktop){
+                    background: $black_closa;
+                    border: none;
+                    font-size: $des_small;
+                    color: $grey-younger_closa;
+                    font-family: "Inter";
+                    &:hover{
+                        color: $white_closa;
+                        border: none;
+                        border-color: none;
+                    }
+                    &:active{
+                        border: none;
+                        border-color: none;
+                    }
+                }
+                @include breakpoint (mobile){
+                    padding: 20px;
+                    margin-bottom: 1rem;
+                    border-radius: 50px;
+                    min-width: 30%;
+                    background: $black_closa;
+                    color: $white_closa;
+                    border-color: $white_closa;
+                    display: inline-block;
+                    border-width: 5px;
+                    z-index: 1;
+                }
+            }
+            &:last-child{
+                button{
+                    @include breakpoint (desktop){
+                        color: $white_closa;
+                    }
+                }
+            }
+            .navbar__white-arrow{
+                transform: rotate(270deg);
+                margin-right: 5px;
+                @include breakpoint (desktop){
+                    margin-right: 0.5rem;
+                }
+            }
+        }
+    }
+
+    .isDesktop{
+        @include breakpoint (desktop){
+            display: flex;
+        }
+        @include breakpoint (tablet){
+            display: none;
+        }
+        @include breakpoint (mobile){
+            display: none;
+        }
+    }
+    .isMobile{
+        @include breakpoint (desktop){
+            display: none;
+        }
+        @include breakpoint (mobile){
+            display: block;
+        }
+    }
+}
+
+

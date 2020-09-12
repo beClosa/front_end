@@ -1,0 +1,91 @@
+$font_idx : 1;
+$font_default : "Helvetica, Arial, sans-serif" !default;
+
+// color lists
+
+$black_closa: #0A0A0C;
+$white_closa: #FFFFFF;
+$grey_closa: #CDCDCD; //only when hover
+$grey-younger_closa : #CACACA;
+$notquiteblack_closa : #23272A;
+
+
+//desktop
+$des_smaller: 14px;
+$des_small: 18px;
+$des_small-bigger : 32px;
+$des_mid: 36px;
+$des_big: 64px;
+
+//mobile
+$mob_smaller: 12px;
+$mob_small: 14px;
+$mob_normal: 18px;
+$mob_mid: 24px;
+$mob_big: 36px;
+$mob_bigger : 52px;
+
+$bold_text: bold;
+
+// radius border
+$radius_smaller : 1px;
+$radius_default : 16px;
+// padding for mobile
+$padding_container-mobile : 0px 28px;
+// padding for desktop
+$padding_container-desktop : 0px 128px;
+// media-query
+$media-query: (
+        laptop,
+        (
+                min-width: 1366px,
+        )
+        ),
+        (
+                desktop,
+                (
+                        min-width: 1200px,
+                )
+        ),
+        (
+                wide,
+                (
+                        min-width: 992px,
+                )
+        ),
+        (
+                tablet,
+                (
+        min-width: 768px,
+      )
+      and
+      (
+        max-width: 991px,
+      )
+        ),
+        (
+                mobile,
+                (
+                        max-width: 767px,
+                )
+        ),
+        (
+                small-mobile,
+                (
+                        max-width: 360px,
+                )
+        );
+
+
+// Font Family Ex. (name, 'fonts/path')
+$font_family: (
+        Inter-Medium: "../../fonts/Inter-Medium",
+        Inter-Bold: "../../fonts/Inter-Bold",
+        Inter-ExtraBold: "../../fonts/Inter-ExtraBold",
+        Inter-ExtraLight: "../../fonts/Inter-ExtraLight",
+        Inter-Light: "../../fonts/Inter-Light",
+        Inter-Regular: "../../fonts/Inter-Regular",
+        Inter-SemiBold: "../../fonts/Inter-SemiBold",
+        Inter-Thin: "../../fonts/Inter-Thin",
+        Inter-Black : "../../fonts/Inter-Black"
+);

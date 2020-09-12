@@ -1,0 +1,44 @@
+/* utils */
+@import
+'../utils/variables',
+'../utils/mixins';
+
+
+/* Base */
+@import
+'../base/fonts';
+
+.heading{
+  position: relative;
+}
+.description{
+  &__wrapper{
+    color: $white_closa;
+    font-size: $mob_mid;
+    font-family: "Inter-Thin";
+    line-height: 44px;
+    margin-top: 25vh;
+    text-align: center;
+    text-align: left;
+    @include breakpoint (desktop){
+      margin: auto;
+    }
+    p{
+      width: 296px;
+      font-size: $mob_big;
+      font-family: "Inter-Light";
+      font-style: normal;
+      @include breakpoint (desktop){
+        width: auto;
+        margin: 0;
+      }
+      @include breakpoint (tablet){
+        width: auto;
+        margin: 0;
+      }
+    }
+    strong{
+      font-family: "Inter-Bold";
+    }
+  }
+}

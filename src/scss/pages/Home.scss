@@ -1,0 +1,441 @@
+/* utils */
+@import
+'../utils/variables',
+'../utils/mixins';
+
+
+/* Base */
+@import
+'../base/fonts';
+
+.home{
+  scroll-snap-type: y mandatory;
+  overflow-y: auto;
+  height: 100vh;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar { 
+  display: none;
+}
+}
+
+.section{
+  &__one{
+    .lfm__typing_effect_text{
+      font-weight: 800;
+      font-family: "Inter-Bold";
+    }
+    .description{
+      &__wrapper{
+        p{
+          min-height: 88px;
+          text-align: center;
+          @include breakpoint (desktop){
+            padding: 10% 0;
+          font-size: $des_big;
+          }
+        }
+      }
+    }
+    &-button{
+      text-align: center;
+    }
+  }
+  &__two{
+    .lfm__typing_effect{
+      font-family: "Inter-Bold";
+      font-weight: 800;
+    }
+    br{
+      @include breakpoint (desktop){
+        display: none;
+      }
+    }
+    &-wrapper{
+      @include breakpoint (desktop){
+        display: flex;
+        justify-content: center;
+        padding: 15% 0;
+      }
+    }
+    .description{
+      &:nth-child(1){
+        p{
+          margin-bottom: 32px;
+          @include breakpoint (desktop){
+            font-size: $des_big;
+          }
+        }
+      }
+      &:nth-child(2){
+        .description__wrapper{
+          margin-top: 0;
+        }
+        p{
+          font-size: $mob_small;
+          margin: 0;
+          line-height: 17px;
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+          font-family: "Inter-Regular";
+          font-style: normal;
+          font-weight: normal;
+          width: 264px !important;
+        }
+      }
+    }
+  }  
+  &__three{
+    .lfm__typing_effect_text{
+      font-family: "Inter-Light";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: $white_closa;
+    }
+    &-wrapper{
+      @include breakpoint (desktop){
+        display: flex;
+        justify-content: center;
+        padding: 15% 0;
+      }
+    }
+    &-item{
+      @include breakpoint (desktop){
+        &:nth-child(1){
+          flex-basis: 50%;
+          @include breakpoint (desktop){
+            align-self: center;
+          }
+          p{
+            font-size: $des_big;
+          }
+        }
+        &:nth-child(2){
+          flex-basis: 100%;
+          @include breakpoint (desktop){
+            min-height: 152px;
+          }
+          span{
+            font-size: $des_small-bigger;
+          }
+        }
+      }
+    }
+  }
+  &__four {
+      font-size: $mob_normal;
+      width: 304px;
+      @include breakpoint (desktop){
+        width: 884px;
+        padding: 15% 0;
+      }
+      &-wrapper{
+        @include breakpoint (desktop){
+          display: flex;
+          justify-content: space-between;
+          padding: 15% 0;
+        }
+      }
+      &-item{
+        &-description{
+          @include breakpoint (desktop){
+            align-self: center;
+          }
+        }
+      }
+      &-lists{
+        @include breakpoint (desktop){
+          flex-basis: 63%;
+        }
+      }
+      &-items{
+       @include breakpoint (desktop){
+          display: flex;
+          flex-wrap: wrap;
+          flex-flow: 1;
+          flex-direction: row;
+          justify-content: flex-end;
+       }
+       .card{
+        @include breakpoint (desktop){
+          flex-basis: 40%;
+          margin: 0 1em 1em 0;
+        }
+      }
+      }
+      .description{
+        &:nth-child(1){
+          .description__wrapper{
+            margin-top: 0;
+            margin-bottom: 1rem;
+            p{
+              font-size: $mob_mid;
+              strong{
+                font-family: "Inter-Bold";
+              }
+              @include breakpoint (desktop){
+                font-size: $des_mid;
+              }
+            }
+          }
+        }
+        &:nth-child(2){
+          .description__wrapper{
+            margin-top: 0;
+          }
+          p{
+            font-size: $mob_smaller;
+            margin: 0;
+            line-height: 2;
+            @include breakpoint (desktop){
+              font-size: $des_small;
+            }
+          }
+        }
+      }
+  } 
+  &__five{
+    position: relative;
+    p{
+      text-transform: uppercase;
+      font-size: $mob_big;
+      font-family: "Inter-Medium";
+      font-weight: 600;
+    }
+    &-wrapper{
+      @include breakpoint (desktop){
+        padding: 10% 0;
+      }
+    }
+    .description{
+      &:nth-child(1){
+        p{
+          font-size: $mob_big;
+          width: 296px;
+          font-family: "Inter-Bold";
+          line-height: 44px;
+          margin-bottom: 16px;
+          @include breakpoint (desktop){
+            width: 873px;
+          }
+        }
+      }
+      &:nth-child(2){
+        .description__wrapper{
+            margin-top: 0;
+        }
+        p{
+          font-size: $mob_small;
+          font-family: "Inter-Light";
+          font-style: normal;
+          font-weight: normal;
+          width: 254px;
+          text-transform: uppercase;
+          line-height: 17px;
+          letter-spacing: 0.05em;
+          margin-bottom: $mob_bigger;
+          @include breakpoint (desktop){
+            width: 761px;
+            margin-bottom: $des_mid;
+          }
+        }
+      }
+    }
+    .button{
+      &__primary{
+        width: 100%;
+      }
+    }
+    .form{
+      &__wrapper{
+        @include breakpoint (desktop){
+          position: relative;
+        }
+      }
+      &__controller{
+        @include breakpoint (desktop){
+          display: flex;
+        }
+        input{
+          @include breakpoint (desktop){
+            margin-bottom: 0;
+            margin-right: 1rem;
+            flex-basis: 23%;
+          }
+        }
+        button{
+          text-transform: uppercase;
+          @include breakpoint (desktop){
+            flex-basis: 10%;
+          }
+        }
+        p{
+          position: absolute;
+          bottom: -50%;
+          transform: translateY(50%);
+        }
+      }
+    }
+  }
+  
+  &__six{
+    .description{
+      &__wrapper{
+        &-text{
+          font-size: $mob_big;
+          line-height: 44px;
+          font-family: "Inter-Bold";
+          font-style: "normal";
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  &__seven{
+    .lfm__typing_effect{
+      font-family: "Inter-Bold";
+      font-weight: 800;
+    }
+    br{
+      @include breakpoint (desktop){
+        display: none;
+      }
+    }
+    &-wrapper{
+      @include breakpoint (desktop){
+        padding: 15% 0;
+      }
+    }
+    .card{
+      &__wrapper{
+        @include breakpoint (desktop){
+          display: flex;
+          justify-content: space-around;
+        }
+      }
+      &__heading{
+        @include breakpoint (desktop){
+          flex-basis: 40%;
+        }
+        h3{
+          @include breakpoint (desktop){
+            text-align: left;
+          }
+        }
+      }
+    }
+    .description{
+      &__wrapper{
+        @include breakpoint (desktop){
+          text-align: center;
+          min-height: 164px;
+        }
+      }
+      &:nth-child(1){
+        p{
+          margin-bottom: 32px;
+          min-height : 220px;
+          @include breakpoint (desktop){
+            min-height: auto;
+            font-size: $des_big;
+            line-height: 77px;
+          }
+        }
+      }
+      &:nth-child(2){
+        .description__wrapper{
+          margin-top: 0;
+        }
+        p{
+          font-size: $mob_small;
+          margin: 0;
+          line-height: 17px;
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+          font-family: "Inter-Regular";
+          font-style: normal;
+          font-weight: normal;
+          width: 264px;
+          @include breakpoint (desktop){
+            width: auto;
+            font-size: $des_small;
+          }
+        }
+      }
+    }
+  }  
+
+  &__eight{
+    .lfm__typing_effect{
+      font-family: "Inter-Bold";
+      font-weight: 800;
+    }
+    &-wrapper{
+      @include breakpoint (desktop){
+        text-align: center;
+        padding: 15% 0;
+      }
+    }
+    .description{
+      &__wrapper{
+        margin : 0;
+      }
+      p{
+        margin : 0;
+        line-height: 77px;
+      }
+      &:nth-child(1){
+        p{
+          text-align : center;
+          @include breakpoint (desktop){
+            font-size: $des_big;
+          }
+        }
+      }
+      &:nth-child(2){
+        margin : 0;
+        p{
+          text-align : center;
+          font-family: "Inter-Bold";
+          line-height : 44px;
+          font-style: normal;
+          font-weight: normal;
+          @include breakpoint (desktop){
+            font-size: $des_big;
+          }
+        }
+      }
+    }
+  }
+
+  &__nine{
+    min-height: 155px;
+    .tagline{
+      @include breakpoint (desktop){
+        display: flex;
+      }
+      &__wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include breakpoint (desktop){
+          flex-basis: 45%;
+        }
+      }
+      &__item, .description{
+        p{
+          color: $white_closa;
+          font-family: "Inter-Regular";
+          font-style: normal;
+          font-weight: normal;
+          font-size: $mob_normal;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+}
