@@ -20,6 +20,10 @@
         font-size: 18px;
         line-height: 22px;
     }
+    a{
+        color: $white_closa;
+        text-decoration: none;
+    }
     &__item{
        @include breakpoint (desktop){
            flex-grow: 1;

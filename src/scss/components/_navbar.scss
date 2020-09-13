@@ -62,6 +62,7 @@
                 text-align: right;
            }    
             button{
+                outline: none;
                 @include breakpoint (desktop){
                     background: $black_closa;
                     border: none;
@@ -70,6 +71,7 @@
                     font-family: "Inter";
                     &:hover{
                         color: $white_closa;
+                        text-decoration: underline;
                         border: none;
                         border-color: none;
                     }

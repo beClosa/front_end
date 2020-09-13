@@ -4,6 +4,7 @@ import "../../scss/pages/Home.scss";
 import ClosaLogo from "../../images/icons/logo.svg";
 import WhiteLine from "../../images/icons/white-line.svg";
 import Arrow from "../../images/icons/arrow.svg";
+import { Link } from "react-scroll";
 const NavbarCompponent = () => {
     const [navlists, setNavLists] = useState(false);
     return (
@@ -19,23 +20,25 @@ const NavbarCompponent = () => {
                 <HamburgerLists classValue="isDesktop"/>
            </nav>
             {
-                navlists === true ?  <HamburgerLists classValue="isMobile"/> : false
+                navlists === true ?  <HamburgerLists classValue="isMobile" onClickRef={() => setNavLists(!navlists)}/> : false
             }
        </React.Fragment>
     )
 }
 
-const HamburgerLists = ({classValue}) => {
+const HamburgerLists = ({classValue, onClickRef}) => {
      return (
          <ul className={`navbar__lists ${classValue}`}>
              <li className="navbar__lists-item">
                  <button>About</button>
              </li>
              <li className="navbar__lists-item">
-                 <button>Referral</button>
+                 <button>Early member</button>
              </li>
              <li className="navbar__lists-item">
-                 <button>Referral</button>
+                <Link to="section__five" className="footer__item" smooth offset={-20}>
+                    <button onClick={onClickRef} >Referral</button>
+                </Link>
              </li>
              <li className="navbar__lists-item">
                  <button>
