@@ -12,27 +12,36 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import Input from "../components/InputComponent/Input.js";
 import Label from "../components/LabelComponent/Label.js";
 import ClosaLogo from "../images/icons/closa-logo-with-text.svg";
+import Warning from "../components/TextComponent/Warning";
 
 const Home = () => {
     const [refValue, setRef] = useState("");
+    const [isRefError, setRefError] = useState(false);
+    const [errorMessage, setErrorMessage ] = useState("");
+    const [tokens] = useState([
+        {
+            id : uuidv4(),
+            value : "#123456"
+        }
+    ]);
     const cards = [
         {
-            id : uuidv4,
+            id : uuidv4(),
             heading : "Habit-forming",
             description : "Do what matters most to you every day, and do it together with our members."
         },
         {
-            id : uuidv4,
+            id : uuidv4(),
             heading : "Retrospective",
             description : "Evaluate your progress every week and improve your workflow."
         },
         {
-            id : uuidv4,
+            id : uuidv4(),
             heading : "1 on 1 Talk",
             description : "Meet new individuals from diverse background, and unlock new opportunities."
         },
         {
-            id : uuidv4, 
+            id : uuidv4(), 
             heading : "Share Experience",
             description : "New insight and perspective every day from our community activities shared to you."
         }
@@ -41,6 +50,10 @@ const Home = () => {
        let value = event.target.value;
        if(value.length <= 17){
           setRef(event.target.value);
+          if(value.length > 0){
+              setRefError(false);
+              setErrorMessage("");
+          }
        }
     }
     function submitRef(e){
@@ -51,14 +64,25 @@ const Home = () => {
         let resultLimit = stringCheckLimit.test(refValue);
         if(!resultCheck){
             if(!resultLimit){
-                alert("Token Is Filled");
+                setRefError(false);
+                let filterToken = tokens.filter(token => token.value === refValue);
+                if(filterToken.length !== 0){
+                    setRefError(true);
+                    setErrorMessage("Already used")
+                }else{
+                    setRefError(true);
+                    setErrorMessage("Not Found") 
+                }
             }else{
-                alert("You can't input the text more than 16")
+                setErrorMessage("You can't input the text more than 16");
+                setRefError(true)
             }
         }else{
-            alert("Token Is Not Filled");
+            setErrorMessage("You need to input referral code")
+            setRefError(true);
         }
     }
+
     function removeDuplicateCharacter(text){
        let resultText = text.split("#").join("");
        return resultText;
@@ -78,13 +102,11 @@ const Home = () => {
                                     text=
                                     {
                                         [
-                                            "Get things done",
                                             "Do what matters",
+                                            "Get things done",
                                             "Do what you love",
-                                            "Learn",
+                                            "Live life to the fullest",
                                             "Practice",
-                                            "Be 1% Better",
-                                            "Live your life",
                                             "Make it count"
                                         ]
                                     }
@@ -118,12 +140,12 @@ const Home = () => {
                                             eraseDelay={1000}
                                             text={
                                                 [
+                                                    "The People Who Creates & Builds Things",
                                                     "Creator",
                                                     "Designer",
                                                     "Developer",
-                                                    "Artist",
                                                     "Product Manager",
-                                                    "The People Who Creates & Builds Things",
+                                                    "Artist",
                                                 ]
                                             }
                                             cursor={<strong> _ </strong>}
@@ -146,17 +168,15 @@ const Home = () => {
                                                 eraseDelay={1000}
                                                 text={
                                                     [
+                                                        "1 on 1 Talk",
                                                         "productivity",
                                                         "books",
-                                                        "1 on 1 Talk",
-                                                        "Psychology",
-                                                        "Philosophy",
-                                                        "Arts",
-                                                        "Music",
                                                         "Code",
                                                         "Design",
-                                                        "learning",
-                                                        "writing"
+                                                        "Arts",
+                                                        "Music",
+                                                        "Psychology",
+                                                        "Philosophy, learning, writing"
                                                     ]
                                                 }
                                                 cursor={<strong> _ </strong>}
@@ -187,6 +207,7 @@ const Home = () => {
                                         <TypingEffect
                                             speed={50}
                                             typingDelay={100}
+                                            eraseDelay={500}
                                             text={
                                                 [
                                                     "WHO struggle to get things done and want a place to focus.",
@@ -229,6 +250,7 @@ const Home = () => {
                                     {
                                         cards.map(card => (
                                             <Card
+                                                key={card.id}
                                                 imageUrl={Icon}
                                                 alt="closa-svg"
                                                 heading={card.heading}
@@ -261,15 +283,20 @@ const Home = () => {
                                     </div>
                                     <div className="form__controller">
                                         <Input 
-                                            placeholder="#" 
-                                            change={(e) => changeRef(e)}
-                                            value={refValue.length > 0 ? `#${removeDuplicateCharacter(refValue)}` : ""}
-                                            />
+                                                    placeholder="#" 
+                                                    change={(e) => changeRef(e)}
+                                                    value={refValue.length > 0 ? `#${removeDuplicateCharacter(refValue)}` : ""}
+                                                />
+                                                {
+                                                    isRefError === true ? <Warning message={errorMessage} classValue="warning-text"/> : false
+                                                }
                                         <Button 
                                             text="Apply"
-                                            description="We are invite-only community"
                                             type="submit"
                                         />
+                                        <p className="button__description" style={ { bottom : isRefError === true ? -75 + "%" : -50 + "%" } }>
+                                            We are invite-only community
+                                        </p>
                                     </div>
                                 </div>
                             </form>

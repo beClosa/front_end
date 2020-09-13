@@ -26,16 +26,16 @@ const Card = props => {
                     {props.heading}
                 </h3>
             </div>
-            <div className="card__description-arrow">
+            <a href="https://veylectra.typeform.com/to/torkcFdg" className="card__description-arrow">
                <div className="card__description-arrow-item">
-                <p>
-                    {props.description}  
-                </p>
+                    <p>
+                        {props.description}  
+                    </p>
                </div>
                <div className="card__description-arrow-item">
                    <img src={ArrowRight} alt="arrow white right"/>
                </div>
-            </div>
+            </a>
         </div>
            }
         </div>

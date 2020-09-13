@@ -23,6 +23,9 @@ body {
   text-align: center;
   bottom: auto;
   top: 300px;
+  @include breakpoint (mobile){
+    top: 60vh;
+  }
   @include breakpoint (desktop){
     bottom: 30%;
     top: auto;

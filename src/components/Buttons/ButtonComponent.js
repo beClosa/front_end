@@ -10,9 +10,11 @@ const ButtonComponent = props => {
                     props.children
                 }
             </button>
-            <p className="button__description">
-                {props.description}
-            </p>
+            {
+                props.description !== undefined ? <p className="button__description">
+                    {props.description}
+                </p> : false 
+            }
         </React.Fragment>
     )
 }
