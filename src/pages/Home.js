@@ -114,16 +114,18 @@ const Home = () => {
                                 />, "every day"]}
                             />
                             <div className="section__one-button">
+                               <a href="https://veylectra.typeform.com/to/torkcFdg">
                                 <Button>
-                                    <div className="section__one-button-flex">
-                                        <div className="section__one-button-text">
-                                            Join the waitlist
+                                        <div className="section__one-button-flex">
+                                            <div className="section__one-button-text">
+                                                Join the waitlist
+                                            </div>
+                                            <div className="section__one-button-arrow">
+                                                →
+                                            </div>
                                         </div>
-                                        <div className="section__one-button-arrow">
-                                            →
-                                        </div>
-                                    </div>
-                                </Button>
+                                    </Button>
+                               </a>
                             </div>
                             </div>
                             <img src={Arrow} alt="White arrow bottom" className="arrow_white animated infinite fadeInDown slower"/>
@@ -176,7 +178,9 @@ const Home = () => {
                                                         "Arts",
                                                         "Music",
                                                         "Psychology",
-                                                        "Philosophy, learning, writing"
+                                                        "Philosophy",
+                                                        "learning",
+                                                        "writing"
                                                     ]
                                                 }
                                                 cursor={<strong> _ </strong>}

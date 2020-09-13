@@ -210,9 +210,12 @@
             margin-bottom: 1rem;
             p{
               font-size: $mob_mid;
-              line-height: 29px;
+              @include breakpoint (mobile){
+                line-height: 29px;
+              }
               @include breakpoint (desktop){
                 font-size: $des_mid;
+                line-height: auto;
               }
             }
           }
