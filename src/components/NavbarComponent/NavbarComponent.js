@@ -41,10 +41,12 @@ const HamburgerLists = ({classValue, onClickRef}) => {
                 </Link>
              </li>
              <li className="navbar__lists-item">
-                 <button>
-                     <img className="navbar__white-arrow" src={Arrow} alt="closa__arrow-scrolldown"/>
-                     Join the waitlist
-                 </button>
+                <a href="https://veylectra.typeform.com/to/torkcFdg">
+                    <button>
+                        <img className="navbar__white-arrow" src={Arrow} alt="closa__arrow-scrolldown"/>
+                        Join the waitlist
+                    </button>
+                </a>
              </li>
          </ul>
      )
