@@ -23,6 +23,9 @@
     @include breakpoint (desktop){
       margin: auto;
     }
+    @include breakpoint (tablet){
+      margin-top: 18vh;
+    }
     p{
       width: 296px;
       font-size: $mob_big;

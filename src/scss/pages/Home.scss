@@ -403,6 +403,13 @@
             font-size: $des_big;
             line-height: 77px;
           }
+          @include breakpoint (wide){
+            width: 400px;
+            min-height: 176px;
+          }
+          @include breakpoint (tablet){
+            min-height: 0;
+          }
         }
       }
       &:nth-child(2){
@@ -426,6 +433,12 @@
           @include breakpoint (desktop){
             width: auto;
             font-size: $des_small;
+          }
+          @include breakpoint (wide){
+            width: 400px !important;
+          }
+          @include breakpoint (tablet){
+            width: 400px !important;
           }
         }
       }
