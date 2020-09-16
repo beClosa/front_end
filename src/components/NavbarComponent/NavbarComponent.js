@@ -36,7 +36,7 @@ const HamburgerLists = ({classValue, onClickRef}) => {
                  <button>Early member</button>
              </li>
              <li className="navbar__lists-item">
-                <Link to="section__five" className="footer__item" smooth offset={-20}>
+                <Link to="section__five" className="footer__item" smooth offset={-65}>
                     <button onClick={onClickRef} >Referral</button>
                 </Link>
              </li>

@@ -24,13 +24,16 @@
         p{
           min-height: 132px;
           text-align: center;
-          @include breakpoint (mobile){
-            margin-bottom: 4.5rem;
-            margin-top: 7.75rem;
-          }
           @include breakpoint (desktop){
             padding: 10% 0;
             font-size: $des_big;
+          }
+          @include breakpoint (wide){
+            width: 100%;
+          }
+          @include breakpoint (mobile){
+            margin-bottom: 4.5rem;
+            margin-top: 7.75rem;
           }
         }
       }
@@ -86,6 +89,15 @@
       @include breakpoint (desktop){
         display: none;
       }
+      @include breakpoint (wide){
+        display: none;
+      }
+      @include breakpoint (tablet){
+        display: none;
+      }
+      @include breakpoint (mobile){
+        display: block;
+      }
     }
     &-wrapper{
       @include breakpoint (desktop){
@@ -100,6 +112,16 @@
           margin-bottom: 32px;
           @include breakpoint (desktop){
             font-size: $des_big;
+          }
+          @include breakpoint (wide){
+            width: 100%;
+            text-align: center;
+          }
+          @include breakpoint (tablet){
+            text-align: center;
+          }
+          @include breakpoint (mobile){
+            text-align: left;
           }
         }
       }
@@ -138,6 +160,34 @@
         justify-content: center;
         padding: 15% 0;
       }
+      @include breakpoint (wide){
+        display: flex;
+        justify-content: center;
+        padding: 15% 0;
+      }
+      @include breakpoint (tablet){
+        display: flex;
+        justify-content: center;
+        padding: 15% 0;
+      }
+      @include breakpoint (mobile){
+        display: flex;
+        justify-content: center;
+        padding: 15% 0;
+      }
+      @include breakpoint (mobile){
+        flex-direction: column;
+      }
+      .description__wrapper{
+        @include breakpoint (wide){
+          margin-top: 0;
+          text-align: center;
+        }
+        @include breakpoint (tablet){
+          margin-top: 0;
+          text-align: center;
+        }
+      }
     }
     &-item{
       @include breakpoint (desktop){
@@ -152,12 +202,31 @@
         }
         &:nth-child(2){
           flex-basis: 100%;
+
           @include breakpoint (desktop){
             min-height: 152px;
           }
           span{
             font-size: $des_small-bigger;
           }
+        }
+      }
+      @include breakpoint (tablet){
+          &:nth-child(1){
+            flex-basis: 50%;
+          }
+          &:nth-child(2){
+            flex-basis: 100%;
+            align-self: end;
+          }
+      }
+      @include breakpoint (wide){
+        &:nth-child(1){
+          flex-basis: 50%;
+        }
+        &:nth-child(2){
+          flex-basis: 100%;
+          align-self: end;
         }
       }
     }
@@ -404,11 +473,17 @@
             line-height: 77px;
           }
           @include breakpoint (wide){
-            width: 400px;
-            min-height: 176px;
+            text-align: center;
+            width: 100%;
+            min-height: 0px;
           }
           @include breakpoint (tablet){
             min-height: 0;
+          }
+          @include breakpoint (mobile){
+            width: 100%;
+            min-height: 230px;
+            text-align: left;
           }
         }
       }
@@ -429,16 +504,24 @@
           font-family: "Inter-Regular";
           font-style: normal;
           font-weight: normal;
-          width: 264px;
           @include breakpoint (desktop){
             width: auto;
+            width: 100%;
             font-size: $des_small;
           }
           @include breakpoint (wide){
-            width: 400px !important;
+            width: 556px;
+            margin: 0 auto;
+            text-align: center;
           }
           @include breakpoint (tablet){
-            width: 400px !important;
+            width: 556px;
+            margin: 0 auto;
+            text-align: center;
+          }
+          @include breakpoint (mobile){
+            text-align: left;
+            width: 100% !important;
           }
         }
       }
@@ -464,6 +547,15 @@
         margin : 0;
         @include breakpoint (desktop){
           line-height: 77px;
+        }
+        @include breakpoint (tablet){
+          width: 100%;
+        }
+        @include breakpoint (wide){
+          width: 100%;
+        }
+        @include breakpoint (desktop){
+          width: auto;
         }
       }
       &:nth-child(1){
