@@ -14,9 +14,17 @@ $notquiteblack_closa : #23272A;
 //desktop
 $des_smaller: 14px;
 $des_small: 18px;
-$des_small-bigger : 32px;
+$des_small_bigger : 32px;
+$des_mid_small: 24px; 
 $des_mid: 36px;
 $des_big: 64px;
+
+// tablet
+$tab_smaller: 14px;
+$tab_small: 18px;
+$tab_small-bigger : 32px;
+$tab_mid: 36px;
+$tab_big: 64px;
 
 //mobile
 $mob_smaller: 12px;
@@ -45,13 +53,14 @@ $media-query: (
         (
                 desktop,
                 (
-                        min-width: 1200px,
+                        min-width: 
+                        1200px,
                 )
         ),
         (
                 wide,
                 (
-                        min-width: 992px,
+                        max-width: 1024px,
                 )
         ),
         (

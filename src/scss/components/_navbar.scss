@@ -48,6 +48,26 @@
             flex-basis: 50%;
             justify-content: space-between;
         }
+        @include breakpoint (wide){
+            margin: 0;
+            padding: 0px 15px;
+            list-style-type: none;
+            position: fixed;
+           left: 0;
+            width: 100%;
+            z-index: 2;
+            text-align: right;
+        }
+        @include breakpoint (tablet){
+            margin: 0;
+            padding: 0px 15px;
+            list-style-type: none;
+            position: fixed;
+            left: 0;
+            width: 100%;
+            z-index: 2;
+            text-align: right;
+        }
         @include breakpoint (mobile){
             margin: 0;
             padding: 0px 15px;
@@ -79,6 +99,34 @@
                         border: none;
                         border-color: none;
                     }
+                }
+                @include breakpoint (wide){
+                    padding: 20px;
+                    margin-bottom: 1rem;
+                    border-radius: 50px;
+                    min-width: 0%;
+                    right: 0;
+                    background: $black_closa;
+                    color: $white_closa;
+                    border-color: $white_closa;
+                    display: inline-block;
+                    border-width: 5px;
+                    z-index: 1;
+                    text-align: right;
+                }
+                @include breakpoint (tablet){
+                    padding: 20px;
+                    margin-bottom: 1rem;
+                    border-radius: 50px;
+                    min-width: 0%;
+                    right: 0;
+                    background: $black_closa;
+                    color: $white_closa;
+                    border-color: $white_closa;
+                    display: inline-block;
+                    border-width: 5px;
+                    z-index: 1;
+                    text-align: right;
                 }
                 @include breakpoint (mobile){
                     padding: 20px;
@@ -113,6 +161,9 @@
     .isDesktop{
         @include breakpoint (desktop){
             display: flex;
+        }
+        @include breakpoint (wide){
+            display: none;
         }
         @include breakpoint (tablet){
             display: none;

@@ -195,7 +195,7 @@ const Home = () => {
                             <Container>
                                   <div className="section__eight-wrapper">
                                         <Description description={"Chance to meet your future"}/>
-                                        <Description description={"Team, Partner, Mentor"}/>
+                                        <Description description={"Team, Partner, Mentor."}/>
                                   </div>
                             </Container>
                     </ScrollAnimation>
@@ -209,9 +209,9 @@ const Home = () => {
                                     </div>
                                     <div className="section__three-item">
                                         <TypingEffect
-                                            speed={50}
+                                            speed={35}
                                             typingDelay={100}
-                                            eraseDelay={500}
+                                            eraseDelay={2000}
                                             text={
                                                 [
                                                     "WHO struggle to get things done and want a place to focus.",

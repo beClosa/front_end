@@ -11,7 +11,7 @@ const Footer = () => {
                         Community Policy
                     </p>
                 </a>
-                <Link to="section__five" className="footer__item" smooth offset={-20}>
+                <Link to="section__five" className="footer__item" smooth offset={-65}>
                     <p  className="footer__item-referal">
                         Referral
                     </p>
