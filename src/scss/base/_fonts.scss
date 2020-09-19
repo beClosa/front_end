@@ -6,12 +6,12 @@
 
   @font-face {
     font-family: $name;
-    src: url('#{$file}.eot');
+    // src: url('#{$file}.eot');
     src:
-            url('#{$file}.eot') format('embedded-opentype'),
+    //         url('#{$file}.eot') format('embedded-opentype'),
             url('#{$file}.woff2') format('woff2'),
-            url('#{$file}.woff') format('woff'),
-            url('#{$file}.ttf') format('truetype'),
-            url('#{$file}.svg#FuturaStdLight') format('svg');
+    //         url('#{$file}.woff') format('woff'),
+    //         url('#{$file}.ttf') format('truetype'),
+    //         url('#{$file}.svg#FuturaStdLight') format('svg');
   }
 }

@@ -236,10 +236,18 @@
   }
   &__four {
       font-size: $mob_normal;
-      width: 304px;
       @include breakpoint (desktop){
         width: 884px;
         padding: 15% 0;
+      }
+      @include breakpoint (tablet){
+        width: auto;
+      }
+      @include breakpoint (wide){
+        width: auto;
+      }
+      @include breakpoint (mobile){
+        width: 304px;
       }
       &-wrapper{
         @include breakpoint (desktop){
@@ -252,6 +260,27 @@
         &-description{
           @include breakpoint (desktop){
             align-self: center;
+          }
+          .description{
+            @include breakpoint (wide){
+              display: flex;
+            }
+            @include breakpoint (tablet){
+              display: flex;
+            }
+            @include breakpoint (mobile){
+              display: block;
+            }
+            &__wrapper{
+              @include breakpoint (wide){
+                flex-basis: 27.2%;
+                margin-left: 8%;
+              }
+              @include breakpoint (tablet){
+                flex-basis: 40%;
+                margin-left: 2.2%;
+              }
+            }
           }
         }
       }
@@ -268,14 +297,53 @@
           flex-direction: row;
           justify-content: flex-end;
        }
+       @include breakpoint (wide){
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+       }
+       @include breakpoint (tablet){
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+       }
+       @include breakpoint (mobile){
+         display: block;
+       }
        .card{
         @include breakpoint (desktop){
           flex-basis: 40%;
           margin: 0 1em 1em 0;
         }
+        @include breakpoint (wide){
+          flex-basis: 40%;
+          margin-right: 1rem;
+        }
+        @include breakpoint (tablet){
+          flex-basis: 45%;
+          margin-right: 1rem;
+        }
       }
       }
       .description{
+        &__wrapper{
+          p{
+            @include breakpoint (wide){
+              width: 643px;
+              text-align: justify;
+              margin: 0 auto;
+            }
+            @include breakpoint (tablet){
+              width: 643px;
+              text-align: justify;
+              margin: 0 auto;
+            }
+            @include breakpoint (mobile){
+              width: auto;
+              text-align: left;
+            }
+          }
+        }
         &:nth-child(1){
           .description__wrapper{
             margin-top: 0;
@@ -300,6 +368,18 @@
             font-size: $mob_smaller;
             margin: 0;
             line-height: 1.5;
+            @include breakpoint (wide){
+              width: 643px;
+              margin: 0 auto;
+            }
+            @include breakpoint (tablet){
+              width: 643px;
+              margin: 0 auto;
+            }
+            @include breakpoint (mobile){
+              width: auto;
+              margin: auto;
+            }
             @include breakpoint (desktop){
               font-size: $des_small;
             }
@@ -324,12 +404,20 @@
       &:nth-child(1){
         p{
           font-size: $mob_big;
-          width: 296px;
           font-family: "Inter-Bold";
           line-height: 44px;
           margin-bottom: 16px;
           @include breakpoint (desktop){
             width: 873px;
+          }
+          @include breakpoint (wide){
+            width: auto;
+          }
+          @include breakpoint (tablet){
+            width: auto;
+          }
+          @include breakpoint (mobile){
+            width: 296px;
           }
         }
       }
@@ -350,6 +438,12 @@
           @include breakpoint (desktop){
             width: 761px;
             margin-bottom: $des_mid;
+          }
+          @include breakpoint (wide){
+            width: auto;
+          }
+          @include breakpoint (tablet){
+            width: auto;
           }
         }
       }
@@ -411,7 +505,6 @@
       }
     }
   }
-  
   &__six{
     .description{
       &__wrapper{
@@ -529,8 +622,7 @@
         }
       }
     }
-  }  
-
+  }
   &__eight{
     .lfm__typing_effect{
       font-family: "Inter-Bold";
@@ -584,7 +676,6 @@
       }
     }
   }
-
   &__nine{
     min-height: 155px;
     .tagline{
