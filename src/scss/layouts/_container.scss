@@ -1,6 +1,14 @@
 .container{
-    padding: $padding_container-mobile;
     @include breakpoint (desktop){
         padding: $padding_container-desktop;
+    }
+    @include breakpoint (wide){
+        padding: $padding_container-medium;
+    }
+    @include breakpoint (tablet){
+        padding: $padding_container-medium;
+    }
+    @include breakpoint (mobile){
+        padding: $padding_container-mobile;
     }
 }
