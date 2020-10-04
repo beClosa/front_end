@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <div className="footer">
             <div className="footer__wrapper">
-                <a href="https://www.notion.so/Community-Policy-141b72e0476a4beab46bded6672fd536" className="footer__item" target="_blank">
+                <a href="https://www.notion.so/Community-Policy-141b72e0476a4beab46bded6672fd536" className="footer__item" target="_blank" rel="noreferrer noopener">
                     <p className="footer__item-community">
                         Community Policy
                     </p>
@@ -16,7 +16,7 @@ const Footer = () => {
                         Referral
                     </p>
                 </Link>
-                <a href="https://instagram.com/beclosa" className="footer__item" target="_blank">
+                <a href="https://instagram.com/beclosa" className="footer__item" target="_blank" rel="noreferrer noopener">
                     <div>
                         <img src={InstagramIcon} alt="Instagram Icon" />
                     </div>
@@ -26,7 +26,7 @@ const Footer = () => {
                         </p>
                     </div>
                 </a>
-                <a href="https://twitter.com/beclosa" className="footer__item" target="_blank">
+                <a href="https://twitter.com/beclosa" className="footer__item" target="_blank" rel="noreferrer noopener">
                     <div>
                         <img src={TwitterIcon} alt="Twitter Icon"/>
                     </div>
