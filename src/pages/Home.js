@@ -314,7 +314,7 @@ const Home = () => {
                         <Container>
                            <div className="section__seven-wrapper">
                                 <Card
-                                        heading="We still early. Join us. Do what matters."
+                                        heading="We still early. Join us to closa. Do what matters."
                                         description="Join the waitlist"
                                     />
                            </div>
